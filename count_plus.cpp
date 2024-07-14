@@ -1,67 +1,83 @@
 #include <iostream>
-#include <ctime>
-#include <cstlib>
+#include <cstdlib>
+#include <vector>
+#include <fstream>
 using namespace std;
-int a,b;
-string x;
-long long int pow(int a,int b){
-	long long int ans=1;
-	for(int i=1;i<=b;i++){
-		ans*=a;
-	}
-	return ans;
-}
-int log(int a,int b){
-	for(int i=1; ;i++){
-		int flag=pow(a,i);
-		if(flag==b){
-			return i;
-		}
-		if(flag>b){
-			break;
-		}
-	}
-	return -1;
-}
+vector<string> code;
+string str;
+int cnt;//琛屾暟
 int main(){
-	while(a!=0||b!=0){
-		cin>>a>>x>>b;
-		if(x=="+"){
-			cout<<a+b<<endl;
-		}
-		else if(x=="-"){
-			cout<<a-b<<endl;
-		}
-		else if(x=="*"){
-			cout<<a*b<<endl;
-		}
-		else if(x=="/"&&b!=0){
-			cout<<a/b;
-			if(a%b!=0){
-				cout<<"......"<<a%b;
-			}
-			cout<<endl;
-		}
-		else if(x=="pow"){
-			cout<<pow(a,b);
-		}
-		else if(x=="log"){
-			cout<<log(a,b)<<endl;
-		}
-		else if(x=="abs"){
-			if(a>b){
-				cout<<a-b<<endl;
+	cout<<"娆㈣繋浣跨敤zhizi浠ｇ爜缂栬緫鍣?<<endl;
+	system("pause");
+	system("cls");
+	while(true){
+		cin>>str;
+		if(str=="/del"){
+			int a;
+			cin>>a;
+			if(a>cnt){
+				cout<<"閿欒"<<endl;
 			}
 			else{
-				cout<<b-a<<endl;
+				if(a==cnt){
+					code[a]="";
+					cnt--;
+				}
+				else{
+					for(int i=a;i<cnt;i++){
+						code[i]=code[i+1];
+					}
+					cnt--;
+				}
 			}
 		}
-		else if(x=="rand"){
-			srand(time(0));
-			cout<<rand()%a+(b-a)<<endl;
+		else if(str=="/see"){
+			int a,b;
+			cin>>a>>b;
+			for(int i=a;i<=b;i++){
+				cout<<code[i]<<endl;
+			}
+		}
+		else if(str=="/size"){
+			cout<<cnt<<endl;
+		}
+		else if(str=="/allsee"){
+			for(int i=1;i<=cnt;i++){
+				cout<<code[i]<<endl;
+			}
+		}
+		else if(str=="i"){
+		    int a;
+		    cin>>a;
+		    cin>>str;
+		    for(int i=cnt;i<=a;i++){
+		        code[i+1]=code[i];
+		    }
+		    cnt++;
+		    code[a]=str;
+		}
+		else if(str=="/del"){
+		    int a;
+		    cin>>a;
+		    for(int i=a;i<=cnt;i++){
+		        code[a]=code[a+1];
+		    }
+		    cnt--;
+		}
+		else if(str=="/end"){
+		    ofstream fout;
+		    string file;
+		    cin>>file;
+		    fout.open(file.c_str());
+		    for(int i=1;i<=cnt;i++){
+		        fout<<code[i]<<endl;
+		    }
+		    fout.close();
+		    return 0;
 		}
 		else{
-			cout<<"����"<<endl;
+			code.push_back(str);
+			cnt++;
 		}
 	}
 }
