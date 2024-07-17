@@ -5,7 +5,7 @@
 using namespace std;
 vector<string> in;
 vector<string> out;
-vector<int> f;//´¢´æ´íÎóµÄÏÂ±ê
+vector<int> f;//å‚¨å­˜é”™è¯¯çš„ä¸‹æ ‡
 int main(){
 	freopen("answer.in","r",stdout);
 	int n;
@@ -17,8 +17,8 @@ int main(){
 		getline(cin,str);
 		out.push_back(str);
 	}
-	system("start test.exe");//¿ÉĞŞ¸Ä,¸ÃexeÖĞÓ¦°üÀ¨ÎÄ¼ş¶ÁÈ¡
-	system("del test.exe")//¼õÉÙÄÚ´æÀË·Ñ
+	system("start test.exe");//å¯ä¿®æ”¹,è¯¥exeä¸­åº”åŒ…æ‹¬æ–‡ä»¶è¯»å–
+	system("del test.exe")//å‡å°‘å†…å­˜æµªè´¹
 	double score=100.0;
 	double sub=100/n;
 	const int flag=n;
@@ -38,7 +38,7 @@ int main(){
 		cout<<"WA";
 	}
 	cout<<endl;
-	cout<<"´íÎóÊäÈë:"<<endl;
+	cout<<"é”™è¯¯è¾“å…¥:"<<endl;
 	for(int i=0;i<f.size();i++){
 		cout<<f[i]<<','<<in[f[i]]<<endl;
 	}
