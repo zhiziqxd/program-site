@@ -42,8 +42,9 @@ mark operator/(mark num1,mark num2){
 	return ans;
 }
 mark simplify(mark x){
+	bool flag=false;
 	while(flag){
-		bool flag=false;
+		flag=false;
 		for(int i=2;i<=min(x.a,x.b);i++){
 			if(x.a%i==0&&x.b%i==0){
 				x.a%=i;
