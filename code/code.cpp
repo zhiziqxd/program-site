@@ -4,9 +4,9 @@
 using namespace std;
 vector<string> code;
 string str;
-int cnt;//ÐÐÊý
+int cnt;//è¡Œæ•°
 int main(){
-	cout<<"»¶Ó­Ê¹ÓÃzhizi´úÂë±à¼­Æ÷"<<endl;
+	cout<<"æ¬¢è¿Žä½¿ç”¨zhiziä»£ç ç¼–è¾‘å™¨"<<endl;
 	system("pause");
 	system("cls");
 	while(true){
@@ -15,7 +15,7 @@ int main(){
 			int a;
 			cin>>a;
 			if(a>cnt){
-				cout<<"´íÎó"<<endl;
+				cout<<"é”™è¯¯"<<endl;
 			}
 			else{
 				if(a==cnt){
