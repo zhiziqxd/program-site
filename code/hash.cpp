@@ -5,9 +5,9 @@ int n;
 int hash(int n,string str){
 	long long int ans;
 	for(int i=0;i<str.length();i++){
-		ans+=str[i]*n;//n建议使用31,131
+		ans+=str[i]*n;//n陆篓脪茅脢鹿脫脙31,131
 	}
-	return ans;//溢出=自动取模
+	return ans;//脪莽鲁枚=脳脭露炉脠隆脛拢
 }
 int main(){
 	cin>>n>>str;
