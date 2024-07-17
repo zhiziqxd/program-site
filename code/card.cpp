@@ -17,7 +17,7 @@ void start(){
 }
 string user;
 int main(){
-	cout<<"»¶Ó­Ê¹ÓÃflorr³é¿¨"<<endl;
+	cout<<"æ¬¢è¿ä½¿ç”¨florræŠ½å¡"<<endl;
 	sleep(1);
 	start();
 	while(true){
@@ -25,11 +25,11 @@ int main(){
 		if(user=="/r"){
 			int r=rand()%13;
 			if(card[r]){
-				cout<<"ÄãÒÑ¾­»ñµÃ:"<<c[r]<<endl;
+				cout<<"ä½ å·²ç»è·å¾—:"<<c[r]<<endl;
 			}
 			else{
 				card[r]=true;
-				cout<<"¹§Ï²»ñµÃ:"<<c[r]<<endl;
+				cout<<"æ­å–œè·å¾—:"<<c[r]<<endl;
 			}
 		}
 		else if(user=="/see"){
@@ -42,7 +42,7 @@ int main(){
 			system("cls")
 		}
 		else{
-			cout<<"´íÎó"<<endl;
+			cout<<"é”™è¯¯"<<endl;
 		}
 	}
 }
