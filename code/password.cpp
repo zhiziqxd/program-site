@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 int n;
-string str;//可以使用的字符
+string str;//驴脡脪脭脢鹿脫脙碌脛脳脰路没
 void f(int n,string t){
 	if(n==0){
 		cout<<t<<endl;
