@@ -57,7 +57,7 @@ int main(){
 			system("cls");
 		}
 		else{
-			cout<<"´íÎó"<<endl;
+			cout<<"Â´Ã­ÃŽÃ³"<<endl;
 		}
 	}
 }
