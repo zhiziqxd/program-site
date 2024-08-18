@@ -18,14 +18,11 @@ int main(){
 	}
 	for(int i=maxx;i>=1;i--){
 		for(int j=1;j<=26;j++){
-			if(cnt[j]>=i&&j!=26){
+			if(cnt[j]>=i){
 				cout<<"* ";
 			}
-			else if(cnt[j]>=i){
-				cout<<"*";
-			}
-			else if(j!=26){
-				cout<<" ";
+			else{
+				cout<<"  ";
 			}
 		}
 		cout<<endl;
